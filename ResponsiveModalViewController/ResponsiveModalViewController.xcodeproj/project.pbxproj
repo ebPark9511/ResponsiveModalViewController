@@ -15,6 +15,8 @@
 		0AACFF3825653FFE00CABD31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AACFF3625653FFE00CABD31 /* LaunchScreen.storyboard */; };
 		0AACFF452565402800CABD31 /* ResponsiveModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AACFF432565402800CABD31 /* ResponsiveModalViewController.swift */; };
 		0AACFF462565402800CABD31 /* ResponsiveModalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AACFF442565402800CABD31 /* ResponsiveModalViewController.xib */; };
+		0AACFF4B2565412C00CABD31 /* ContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0AACFF4A2565412C00CABD31 /* ContentView.xib */; };
+		0AACFF4E2565413500CABD31 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AACFF4D2565413500CABD31 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		0AACFF3925653FFE00CABD31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0AACFF432565402800CABD31 /* ResponsiveModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponsiveModalViewController.swift; sourceTree = "<group>"; };
 		0AACFF442565402800CABD31 /* ResponsiveModalViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResponsiveModalViewController.xib; sourceTree = "<group>"; };
+		0AACFF4A2565412C00CABD31 /* ContentView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentView.xib; sourceTree = "<group>"; };
+		0AACFF4D2565413500CABD31 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 		0AACFF2A25653FFC00CABD31 /* ResponsiveModalViewController */ = {
 			isa = PBXGroup;
 			children = (
+				0AACFF492565411400CABD31 /* ContentView */,
 				0AACFF402565400200CABD31 /* ResponsiveModalViewController */,
 				0AACFF2B25653FFC00CABD31 /* AppDelegate.swift */,
 				0AACFF2D25653FFC00CABD31 /* SceneDelegate.swift */,
@@ -79,6 +84,15 @@
 				0AACFF442565402800CABD31 /* ResponsiveModalViewController.xib */,
 			);
 			path = ResponsiveModalViewController;
+			sourceTree = "<group>";
+		};
+		0AACFF492565411400CABD31 /* ContentView */ = {
+			isa = PBXGroup;
+			children = (
+				0AACFF4A2565412C00CABD31 /* ContentView.xib */,
+				0AACFF4D2565413500CABD31 /* ContentView.swift */,
+			);
+			path = ContentView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +155,7 @@
 				0AACFF462565402800CABD31 /* ResponsiveModalViewController.xib in Resources */,
 				0AACFF3825653FFE00CABD31 /* LaunchScreen.storyboard in Resources */,
 				0AACFF3525653FFE00CABD31 /* Assets.xcassets in Resources */,
+				0AACFF4B2565412C00CABD31 /* ContentView.xib in Resources */,
 				0AACFF3325653FFC00CABD31 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -153,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AACFF452565402800CABD31 /* ResponsiveModalViewController.swift in Sources */,
+				0AACFF4E2565413500CABD31 /* ContentView.swift in Sources */,
 				0AACFF3025653FFC00CABD31 /* ViewController.swift in Sources */,
 				0AACFF2C25653FFC00CABD31 /* AppDelegate.swift in Sources */,
 				0AACFF2E25653FFC00CABD31 /* SceneDelegate.swift in Sources */,
