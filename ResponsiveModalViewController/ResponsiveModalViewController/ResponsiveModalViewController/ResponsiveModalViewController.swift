@@ -18,7 +18,7 @@ open class ResponsiveModalViewController: UIViewController {
     private var hideCardViewAnimator: UIViewPropertyAnimator? = nil
     
     @IBOutlet private weak var dimView: UIView!
-    @IBOutlet private weak var gesturePanViewHeightConstraint: NSLayoutConstraint!
+    
     @IBOutlet private weak var cardFrameView: UIView!
     @IBOutlet private weak var cardFrameViewBottomConstraint: NSLayoutConstraint!
     @IBOutlet private weak var cardContentFrameView: UIView!
@@ -110,7 +110,7 @@ extension ResponsiveModalViewController {
          
         if let contentViewHeight = contentView.constraints
             .first(where:  {$0.identifier == "ContentViewHeight"})?.constant {
-            cardFrameViewHiehgt = contentViewHeight + gesturePanViewHeightConstraint.constant
+            cardFrameViewHiehgt = contentViewHeight
             cardFrameViewBottomConstraint.constant = contentViewHeight
         }
      

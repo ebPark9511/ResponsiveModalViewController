@@ -2,7 +2,8 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,9 +12,8 @@
             <connections>
                 <outlet property="cardContentFrameView" destination="wV7-94-Fp6" id="40t-jA-cAn"/>
                 <outlet property="cardFrameView" destination="w9X-8a-dz9" id="PJu-et-acE"/>
-                <outlet property="cardFrameViewBottomConstraint" destination="56r-gk-Jko" id="0Wa-8w-N9G"/>
+                <outlet property="cardFrameViewBottomConstraint" destination="6HA-Bh-UVn" id="2qL-Xw-0qQ"/>
                 <outlet property="dimView" destination="urR-wg-W4o" id="kch-yn-PGi"/>
-                <outlet property="gesturePanViewHeightConstraint" destination="Tnv-QD-cA7" id="oGu-yI-644"/>
                 <outlet property="view" destination="eX5-hJ-phd" id="bne-aL-dCf"/>
             </connections>
         </placeholder>
@@ -24,51 +24,37 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="urR-wg-W4o" userLabel="DimView">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                    <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w9X-8a-dz9" userLabel="CardFrameView">
-                            <rect key="frame" x="0.0" y="663" width="414" height="233"/>
-                            <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uhI-92-yWM" userLabel="GesterPanView">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
-                                    <color key="backgroundColor" systemColor="systemRedColor"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="30" id="Tnv-QD-cA7"/>
-                                    </constraints>
-                                    <connections>
-                                        <outletCollection property="gestureRecognizers" destination="Hfq-gh-mpe" appends="YES" id="adM-Zh-Wbt"/>
-                                    </connections>
-                                </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wV7-94-Fp6" userLabel="ContentView">
-                                    <rect key="frame" x="0.0" y="30" width="414" height="203"/>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                </view>
-                            </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            <constraints>
-                                <constraint firstAttribute="bottom" secondItem="wV7-94-Fp6" secondAttribute="bottom" id="2xL-w2-cpq"/>
-                                <constraint firstItem="uhI-92-yWM" firstAttribute="leading" secondItem="w9X-8a-dz9" secondAttribute="leading" id="32v-MQ-OEp"/>
-                                <constraint firstAttribute="height" priority="999" constant="233" id="8jN-cH-VHU"/>
-                                <constraint firstItem="uhI-92-yWM" firstAttribute="top" secondItem="w9X-8a-dz9" secondAttribute="top" id="Bn9-0A-E3t"/>
-                                <constraint firstItem="wV7-94-Fp6" firstAttribute="top" secondItem="uhI-92-yWM" secondAttribute="bottom" id="EDo-jj-Wzo"/>
-                                <constraint firstItem="wV7-94-Fp6" firstAttribute="leading" secondItem="w9X-8a-dz9" secondAttribute="leading" id="FCo-dH-9Sc"/>
-                                <constraint firstAttribute="trailing" secondItem="wV7-94-Fp6" secondAttribute="trailing" id="eZn-f8-2vn"/>
-                                <constraint firstAttribute="trailing" secondItem="uhI-92-yWM" secondAttribute="trailing" id="rBC-xo-qO4"/>
-                            </constraints>
-                        </view>
-                    </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstItem="w9X-8a-dz9" firstAttribute="bottom" secondItem="urR-wg-W4o" secondAttribute="bottom" id="56r-gk-Jko"/>
-                        <constraint firstItem="w9X-8a-dz9" firstAttribute="leading" secondItem="urR-wg-W4o" secondAttribute="leading" id="WYZ-VQ-Ejh"/>
-                        <constraint firstAttribute="trailing" secondItem="w9X-8a-dz9" secondAttribute="trailing" id="bAP-dN-bJo"/>
-                    </constraints>
                     <connections>
                         <outletCollection property="gestureRecognizers" destination="a0T-IN-mo4" appends="YES" id="JXm-kc-JZB"/>
+                    </connections>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w9X-8a-dz9" userLabel="CardFrameView">
+                    <rect key="frame" x="0.0" y="663" width="414" height="233"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wV7-94-Fp6" userLabel="ContentView">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="233"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="wV7-94-Fp6" secondAttribute="bottom" id="2xL-w2-cpq"/>
+                        <constraint firstAttribute="height" priority="999" constant="233" id="8jN-cH-VHU"/>
+                        <constraint firstItem="wV7-94-Fp6" firstAttribute="leading" secondItem="w9X-8a-dz9" secondAttribute="leading" id="FCo-dH-9Sc"/>
+                        <constraint firstAttribute="trailing" secondItem="wV7-94-Fp6" secondAttribute="trailing" id="eZn-f8-2vn"/>
+                        <constraint firstItem="wV7-94-Fp6" firstAttribute="top" secondItem="w9X-8a-dz9" secondAttribute="top" id="miN-WC-Fyh"/>
+                    </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="Hfq-gh-mpe" appends="YES" id="5N9-9q-8Lg"/>
                     </connections>
                 </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="w9X-8a-dz9" firstAttribute="leading" secondItem="eX5-hJ-phd" secondAttribute="leading" id="24R-0n-MBh"/>
+                <constraint firstItem="w9X-8a-dz9" firstAttribute="bottom" secondItem="eX5-hJ-phd" secondAttribute="bottom" id="6HA-Bh-UVn"/>
+                <constraint firstAttribute="trailing" secondItem="w9X-8a-dz9" secondAttribute="trailing" id="90g-fo-fOj"/>
                 <constraint firstAttribute="bottom" secondItem="urR-wg-W4o" secondAttribute="bottom" id="Rm9-fU-O64"/>
                 <constraint firstItem="urR-wg-W4o" firstAttribute="top" secondItem="eX5-hJ-phd" secondAttribute="top" id="fi9-tX-FQN"/>
                 <constraint firstAttribute="trailing" secondItem="urR-wg-W4o" secondAttribute="trailing" id="goD-Uh-WmM"/>
@@ -84,16 +70,13 @@
         <panGestureRecognizer minimumNumberOfTouches="1" id="Hfq-gh-mpe">
             <connections>
                 <action selector="didPanGestureCardView:" destination="-1" id="Kno-K9-5Wp"/>
-                <outlet property="delegate" destination="uhI-92-yWM" id="Zbf-jM-MgN"/>
+                <outlet property="delegate" destination="w9X-8a-dz9" id="CMG-ed-dG6"/>
             </connections>
         </panGestureRecognizer>
     </objects>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
